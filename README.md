@@ -42,6 +42,6 @@ Follow the below sequence of the Projects to implement AWS Architectures with re
 
 20. Lambda Function to Remove Unused EBS Volumes
 
-21. Why Ansible on AWS is more Powerful than AWS CloudFormation
+21. Why Ansible on AWS is more Powerful than AWS CloudFormation?
 
 
