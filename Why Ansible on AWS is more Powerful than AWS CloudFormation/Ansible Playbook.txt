@@ -1,0 +1,15 @@
+- name: "ec2 launcher"
+  hosts: localhost
+  tasks:
+          - name: "launching ec2"
+            ec2:
+                    instance_type: t2.micro
+                    key_name: LinuxServer
+                    image: ami-0323c3dd2da7fb37d
+                    region: us-east-1
+                    group: default
+                    count: 1
+                    vpc_subnet_id: subnet-01ee44283bcd09e5c
+                    wait: yes
+                    assign_public_ip: yes
+                    user_data: "{{ lookup('file', 'user_data') }}"

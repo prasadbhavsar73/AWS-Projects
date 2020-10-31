@@ -1,0 +1,14 @@
+- name: "ec2 launcher"
+  hosts: localhost
+  tasks:
+          - name: "launching ec2"
+            ec2:
+                    instance_type: t2.micro
+                    key_name: prasad
+                    image: ami-06ce3edf0cff21f07
+                    region: eu-west-1
+                    group: default
+                    count: 1
+                    vpc_subnet_id: subnet-24eba342
+                    wait: yes
+                    assign_public_ip: yes
